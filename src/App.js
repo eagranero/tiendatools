@@ -3,22 +3,23 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div>
+      <h1>
+        TiendaTool
+      </h1>
+      <h2>
+        Tienda de Herramientas
+      </h2>
+      <form>
+        <input type="text" id="nombre" placeholder="Nombre"></input>
+        <input type="text" id="apellido" placeholder="Apellido"></input>
+        <input type="text" id="dni" placeholder="DNI"></input>
+        <input type="text" id="dni" placeholder="Domicilio"></input>
+        <button type="submit">Comprar</button>      
+      </form>
+    </div> 
+    </>
   );
 }
 
