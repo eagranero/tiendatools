@@ -3,7 +3,7 @@ const ItemListContainer = (props) => {
         <>
         <div>
             <p>
-                Bienvenido al mejor sitio para comprar de herramientas
+                Bienvenido al mejor sitio para comprar herramientas
             </p>
         </div>
         </>
