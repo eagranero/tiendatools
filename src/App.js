@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './container/ItemListContainer';
+import Item from './components/Item';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <NavBar/>
       </div>
       <div>
-        <ItemListContainer/>
+        <ItemListContainer titulo='OFERTAS' elementos={Item}/>
       </div>
     </div>
     </>
