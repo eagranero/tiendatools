@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
 
 
 const NavBar = (props) => {
     return(
         <>
-        <div className="bg-base-100">
-        <div className="px-20 navbar  items-center">
+        <div className="my-5 bg-base-100">
+        <div className="px-0 navbar items-center">
             <div className="flex-none">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -13,12 +14,12 @@ const NavBar = (props) => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                         </label>
                         <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li>Herramientas Manuales</li>
-                            <li>Herramientas Electricas</li>
-                            <li>Herramientas Neumaticas</li>
-                            <li>Arma tu Taller</li>
-                            <li>Accesorios</li>
-                            <li>Ilumiancion</li>
+                            <Link to='/category/Herramientas%20Manuales'><li>Herramientas Manuales</li></Link>
+                            <Link to='/category/Herramientas%20Electricas'><li>Herramientas Electricas</li></Link>
+                            <Link to='/category/Herramientas%20Neumaticas'><li>Herramientas Neumaticas</li></Link>
+                            <Link to='/category/Arma%20tu%20taller'><li>Arma tu Taller</li></Link>
+                            <Link to='/category/Accesorios'><li>Accesorios</li></Link>
+                            <Link to='/category/Iluminacion'><li>Ilumiancion</li></Link>
                         </ul>
                     </div>
                 </div>

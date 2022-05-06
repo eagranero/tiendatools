@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Item = (props) => {
   return (
     <>
     <div style={{width:'15rem', margin:'20px 20px'}} className="card card-compact w-96 bg-base-100 shadow-xl" >
+      <Link to={'/item/'+props.id}>
         <figure><img src={props.imagen} alt={props.nombre}/></figure>
         <div className="card-body">
             <p style={{fontSize:'0.75rem', textAlign:'left'}}>{props.categoria}</p>
@@ -15,6 +17,7 @@ const Item = (props) => {
                 <button className="btn btn-outline btn-primary">Comprar Ahora</button>
             </div>
         </div>
+        </Link>
     </div>
     </>
   )
