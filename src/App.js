@@ -5,8 +5,12 @@ import ItemListContainer from './container/ItemListContainer';
 import Item from './components/Item';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from './container/ItemDetailContainer';
+import CartProvider from './context/CartContext';
+
 
 function App() {
+ 
+
   return (
     <>
     <div className='mx-10'>
@@ -21,12 +25,15 @@ function App() {
             Tienda de Herramientas
           </h2>
         </div> 
-        <NavBar/>
-        <Routes>
-          <Route path='/' element={<ItemListContainer ofertas='si' titulo='OFERTAS' elementos={Item}/>}/>
-          <Route path='/item/:productId' element={<ItemDetailContainer/>}/>
-          <Route path='/category/:categoria' element={<ItemListContainer ofertas='no' elementos={Item}/>}/>
-        </Routes>
+        <CartProvider>
+         
+          <NavBar/>
+          <Routes>
+            <Route path='/' element={<ItemListContainer ofertas='si' titulo='OFERTAS' elementos={Item}/>}/>
+            <Route path='/item/:productId' element={<ItemDetailContainer/>}/>
+            <Route path='/category/:categoria' element={<ItemListContainer ofertas='no' elementos={Item}/>}/>
+          </Routes>
+        </CartProvider>
       </BrowserRouter>
     </div>
     </>
