@@ -25,14 +25,14 @@ function ItemCount({ initial, stock, onAdd }) {
         <div style={{width:'20rem', marginTop:'0.5rem', display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
             <div >
                 <div style={{display:'flex', flexDirection:'row', justifyContent:'center'}}>
-                <button className="btn btn-outline btn-primary" onClick={handleAumentar}>
-                    {" "}
-                    +{" "}
-                </button>
-                <p style={{marginInline:'1.25rem', display:'flex', alignItems:'center'}}>{contador}</p>
                 <button className="btn btn-outline btn-primary" onClick={handlerRestar}>
                     {" "}
                     -{" "}
+                </button>
+                <p style={{marginInline:'1.25rem', display:'flex', alignItems:'center'}}>{contador}</p>
+                <button className="btn btn-outline btn-primary" onClick={handleAumentar}>
+                    {" "}
+                    +{" "}
                 </button>
                 </div>
             </div>

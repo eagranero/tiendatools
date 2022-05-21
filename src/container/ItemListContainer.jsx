@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Item from "../components/Item";
 import { CartContext } from "../context/CartContext";
-import {productos as listaProductos} from "../data/productos";
+//import {productos as listaProductos} from "../data/productos";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 const ItemListContainer = (props) => {
     
@@ -13,21 +14,23 @@ const ItemListContainer = (props) => {
     const { carrito } = useContext(CartContext)
 
     useEffect(() => {
-        
-        const getProductos = new Promise((resolve, reject) => {
-            setTimeout(()=>{
-                resolve(listaProductos)
-            },2000)  
-        })
-
-        getProductos.then((result)=>{
-            
-            setLoading( false )
-            if (props.ofertas=='si') setProductos(result.filter(p => p.oferta == 'si'))
-            else setProductos(result.filter(p => p.categoria == categoria))
-        })
-      }, [categoria])
+        getProductos()
+    }, [categoria])
     
+      const getProductos = () =>{
+          const db = getFirestore()
+          const productosCollection = collection(db, 'productos')
+          let q
+          if (props.ofertas=='si') q=query(productosCollection,where('oferta','==',true))
+          else q=query(productosCollection,where('categoria','==',categoria))
+          getDocs(q).then( snapshot => {
+            if (snapshot.size>0){
+                const prodData = snapshot.docs.map(d=>({...d.data()}))
+                setProductos(prodData)
+                setLoading( false )
+            }
+          })
+      }
       
     return(
        

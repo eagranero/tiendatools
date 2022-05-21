@@ -31,10 +31,23 @@ const CartProvider = ({children}) => {
         })
     }
 
+    const eliminarDelCarrito = (producto) => {
+        let indice = carrito.findIndex(p => p.detalle.id === producto)
+        if (indice != -1){
+            setCarrito(carritoActual=>{
+                const nuevoCarrito=[...carritoActual]
+                if (nuevoCarrito[indice].cantidad>1) nuevoCarrito[indice].cantidad-=1
+                else nuevoCarrito.splice(indice,1)
+                return nuevoCarrito
+            })
+        }
+    }
+
     const contexto = {
         carrito,
         addCarrito,
-        borrarCarrito
+        borrarCarrito,
+        eliminarDelCarrito
     }
 
     return(

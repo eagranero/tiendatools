@@ -14,9 +14,9 @@ return (
             <div className="card-body">
                 <div>
                     <p style={{fontSize:'0.75rem', textAlign:'left'}}>{data.categoria}</p>
-                    <div style={{height:'30px', display:'flex', flexDirection:'row', justifyContent:'space-between'}} >
-                        <h2 style={{display:'flex', flexDirection:'column', justifyContent:'end',fontSize:'1.25rem', fontWeight:'bold', textAlign:'initial'}}>{data.nombre}</h2>
-                        <label style={{display:'flex', flexDirection:'column', justifyContent:'end', fontSize:'1.5rem'}}>{'$'+data.precio}</label>
+                    <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}} >
+                        <h2 style={{ display:'flex', flexDirection:'column', justifyContent:'center',fontSize:'1.25rem', fontWeight:'bold', textAlign:'initial'}}>{data.nombre}</h2>
+                        <label style={{marginBlock:'0.5rem',display:'flex', flexDirection:'column', justifyContent:'center', fontSize:'1.5rem'}}>{'$'+data.precio}</label>
                     </div>
                 </div>
             </div>
