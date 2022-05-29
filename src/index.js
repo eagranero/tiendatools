@@ -7,12 +7,12 @@ import { initializeApp } from "firebase/app";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAn_jc1mFooAKaMShlnQC8vANFQ7qh9HNE",
-  authDomain: "tiendatools-ce56b.firebaseapp.com",
-  projectId: "tiendatools-ce56b",
-  storageBucket: "tiendatools-ce56b.appspot.com",
-  messagingSenderId: "91972339799",
-  appId: "1:91972339799:web:57138a6c649d9086c47b12"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 
