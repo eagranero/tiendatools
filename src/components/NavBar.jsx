@@ -5,8 +5,8 @@ import CartWidget from "./CartWidget"
 const NavBar = (props) => {
     return(
         <>
-        <div className="my-5 bg-base-100">
-        <div className="px-0 navbar items-center">
+        <div className="my-2 bg-base-100">
+        <div style={{height:'10vh'}} className="px-0 navbar items-center">
             <div className="flex-none">
                 <div className="navbar-start">
                     <div className="dropdown">

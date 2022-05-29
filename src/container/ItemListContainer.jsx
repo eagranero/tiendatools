@@ -42,7 +42,9 @@ const ItemListContainer = (props) => {
                 <div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', flexWrap:'wrap' }}>
                     
                     { loading ?
-                        <h1>Cargando Productos...</h1>
+                        <div style={{minHeight:'58vh'}}>
+                            <h1 >Cargando Productos...</h1>
+                        </div>
                     :
                         productos.map(producto => <Item key={producto.id} id={producto.id} nombre={producto.nombre} precio={producto.precio} categoria={producto.categoria} imagen={'/productos/'+producto.imagen} ></Item>)
                     }

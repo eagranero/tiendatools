@@ -1,0 +1,45 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bloque{
+    width: 70%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.SubBloque{
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+input{
+    margin-inline: 0.25rem;
+}
+
+.A100{
+width: 100%;
+}
+
+.A50{
+width: 50%;
+}
+
+.A40{
+    width: 40%;
+}
+
+label{
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+
+h1{
+    text-Align:'center'
+}
+h2{
+    text-Align:'center'
+}
+
